@@ -24,7 +24,7 @@ export default class ExerciseList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://exercise-backend-mx63.onrender.com/exercises/')
             .then(response => {
                 this.setState({ exercises: response.data})
             })
@@ -35,7 +35,7 @@ export default class ExerciseList extends Component {
 
     deleteExercise(id) {
         alert("ddddddddd");
-        axios.delete('http://localhost:5000/exercises/' + id)
+        axios.delete('https://exercise-backend-mx63.onrender.com/exercises/' + id)
             .then(res => console.log(res.data));
         this.setState( {
             exercises: this.state.exercises.filter( el => el._id !== id)
