@@ -72,7 +72,7 @@ export default class CreateExercise extends Component {
 
         console.log(exercise);
 
-        axios.post('https://exercise-backend-mx63.onrender.com/add', exercise)
+        axios.post('https://exercise-backend-mx63.onrender.com/exercises/add', exercise)
             .then(res => console.log(res.data));
 
 
