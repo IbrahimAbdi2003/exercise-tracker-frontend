@@ -21,12 +21,12 @@ export default class CreateUser extends Component {
     onSubmit(e) {
         e.preventDefault();
         const user = {
-            username: this.state.username,
+            username: this.state.username
         };
 
         console.log(user);
 
-        axios.post('https://exercise-backend-mx63.onrender.com/add', user)
+        axios.post('https://exercise-backend-mx63.onrender.com/users/add', user)
             .then(res => console.log(res.data));
 
         this.setState({
